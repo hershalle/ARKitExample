@@ -8,10 +8,10 @@
 
 import ARKit
 
-class ViewController: UIViewController, ARSKViewDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate {//ARSKViewDelegate {
 
-    var sceneView: ARSKView {
-        return view as! ARSKView
+    var sceneView: ARSCNView {
+        return view as! ARSCNView
     }
     
     fileprivate func setupSceneView() {
@@ -20,9 +20,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
         let emptyScene = SKScene()
         emptyScene.scaleMode = .resizeFill
         emptyScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        sceneView.presentScene(emptyScene)
-        sceneView.showsFPS = true
-        sceneView.showsNodeCount = true
+        sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints, .showPhysicsShapes]
+        sceneView.showsStatistics = true
     }
     
     override func viewDidLoad() {
@@ -35,6 +34,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
         super.viewWillAppear(animated)
         
         let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
         sceneView.session.run(configuration)
     }
     
@@ -58,6 +58,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
         print("Session resumed")
         sceneView.session.run(session.configuration!, options: [.resetTracking, .removeExistingAnchors])
     }
+
+//    sceneView.session.configuration
     
 //    func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
 //        return nil
