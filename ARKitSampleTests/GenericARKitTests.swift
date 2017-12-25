@@ -1,15 +1,15 @@
 //
-//  GenericARKitTests.swift
-//  GenericARKitTests
+//  ARKitSampleTests.swift
+//  ARKitSampleTests
 //
 //  Created by Shai Balassiano on 25/12/2017.
 //  Copyright © 2017 Shai Balassiano. All rights reserved.
 //
 
 import XCTest
-@testable import GenericARKit
+@testable import ARKitSample
 
-class GenericARKitTests: XCTestCase {
+class ARKitSampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

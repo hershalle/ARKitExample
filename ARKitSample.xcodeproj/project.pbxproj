@@ -34,17 +34,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9865F9701FF10A4B00366A31 /* GenericARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenericARKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9865F9701FF10A4B00366A31 /* ARKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9865F9731FF10A4B00366A31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9865F9751FF10A4B00366A31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9865F9781FF10A4B00366A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9865F97A1FF10A4B00366A31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9865F97D1FF10A4B00366A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9865F97F1FF10A4B00366A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9865F9841FF10A4B00366A31 /* GenericARKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenericARKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9865F9841FF10A4B00366A31 /* ARKitSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARKitSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9865F9881FF10A4B00366A31 /* GenericARKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericARKitTests.swift; sourceTree = "<group>"; };
 		9865F98A1FF10A4B00366A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9865F98F1FF10A4B00366A31 /* GenericARKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenericARKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9865F98F1FF10A4B00366A31 /* ARKitSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARKitSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9865F9931FF10A4B00366A31 /* GenericARKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericARKitUITests.swift; sourceTree = "<group>"; };
 		9865F9951FF10A4B00366A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,9 +77,9 @@
 		9865F9671FF10A4B00366A31 = {
 			isa = PBXGroup;
 			children = (
-				9865F9721FF10A4B00366A31 /* GenericARKit */,
-				9865F9871FF10A4B00366A31 /* GenericARKitTests */,
-				9865F9921FF10A4B00366A31 /* GenericARKitUITests */,
+				9865F9721FF10A4B00366A31 /* ARKitSample */,
+				9865F9871FF10A4B00366A31 /* ARKitSampleTests */,
+				9865F9921FF10A4B00366A31 /* ARKitSampleUITests */,
 				9865F9711FF10A4B00366A31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,14 +87,14 @@
 		9865F9711FF10A4B00366A31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9865F9701FF10A4B00366A31 /* GenericARKit.app */,
-				9865F9841FF10A4B00366A31 /* GenericARKitTests.xctest */,
-				9865F98F1FF10A4B00366A31 /* GenericARKitUITests.xctest */,
+				9865F9701FF10A4B00366A31 /* ARKitSample.app */,
+				9865F9841FF10A4B00366A31 /* ARKitSampleTests.xctest */,
+				9865F98F1FF10A4B00366A31 /* ARKitSampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9865F9721FF10A4B00366A31 /* GenericARKit */ = {
+		9865F9721FF10A4B00366A31 /* ARKitSample */ = {
 			isa = PBXGroup;
 			children = (
 				9865F9731FF10A4B00366A31 /* AppDelegate.swift */,
@@ -104,33 +104,33 @@
 				9865F97C1FF10A4B00366A31 /* LaunchScreen.storyboard */,
 				9865F97F1FF10A4B00366A31 /* Info.plist */,
 			);
-			path = GenericARKit;
+			path = ARKitSample;
 			sourceTree = "<group>";
 		};
-		9865F9871FF10A4B00366A31 /* GenericARKitTests */ = {
+		9865F9871FF10A4B00366A31 /* ARKitSampleTests */ = {
 			isa = PBXGroup;
 			children = (
 				9865F9881FF10A4B00366A31 /* GenericARKitTests.swift */,
 				9865F98A1FF10A4B00366A31 /* Info.plist */,
 			);
-			path = GenericARKitTests;
+			path = ARKitSampleTests;
 			sourceTree = "<group>";
 		};
-		9865F9921FF10A4B00366A31 /* GenericARKitUITests */ = {
+		9865F9921FF10A4B00366A31 /* ARKitSampleUITests */ = {
 			isa = PBXGroup;
 			children = (
 				9865F9931FF10A4B00366A31 /* GenericARKitUITests.swift */,
 				9865F9951FF10A4B00366A31 /* Info.plist */,
 			);
-			path = GenericARKitUITests;
+			path = ARKitSampleUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9865F96F1FF10A4B00366A31 /* GenericARKit */ = {
+		9865F96F1FF10A4B00366A31 /* ARKitSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9865F9981FF10A4B00366A31 /* Build configuration list for PBXNativeTarget "GenericARKit" */;
+			buildConfigurationList = 9865F9981FF10A4B00366A31 /* Build configuration list for PBXNativeTarget "ARKitSample" */;
 			buildPhases = (
 				9865F96C1FF10A4B00366A31 /* Sources */,
 				9865F96D1FF10A4B00366A31 /* Frameworks */,
@@ -140,14 +140,14 @@
 			);
 			dependencies = (
 			);
-			name = GenericARKit;
+			name = ARKitSample;
 			productName = GenericARKit;
-			productReference = 9865F9701FF10A4B00366A31 /* GenericARKit.app */;
+			productReference = 9865F9701FF10A4B00366A31 /* ARKitSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9865F9831FF10A4B00366A31 /* GenericARKitTests */ = {
+		9865F9831FF10A4B00366A31 /* ARKitSampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9865F99B1FF10A4B00366A31 /* Build configuration list for PBXNativeTarget "GenericARKitTests" */;
+			buildConfigurationList = 9865F99B1FF10A4B00366A31 /* Build configuration list for PBXNativeTarget "ARKitSampleTests" */;
 			buildPhases = (
 				9865F9801FF10A4B00366A31 /* Sources */,
 				9865F9811FF10A4B00366A31 /* Frameworks */,
@@ -158,14 +158,14 @@
 			dependencies = (
 				9865F9861FF10A4B00366A31 /* PBXTargetDependency */,
 			);
-			name = GenericARKitTests;
+			name = ARKitSampleTests;
 			productName = GenericARKitTests;
-			productReference = 9865F9841FF10A4B00366A31 /* GenericARKitTests.xctest */;
+			productReference = 9865F9841FF10A4B00366A31 /* ARKitSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9865F98E1FF10A4B00366A31 /* GenericARKitUITests */ = {
+		9865F98E1FF10A4B00366A31 /* ARKitSampleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9865F99E1FF10A4B00366A31 /* Build configuration list for PBXNativeTarget "GenericARKitUITests" */;
+			buildConfigurationList = 9865F99E1FF10A4B00366A31 /* Build configuration list for PBXNativeTarget "ARKitSampleUITests" */;
 			buildPhases = (
 				9865F98B1FF10A4B00366A31 /* Sources */,
 				9865F98C1FF10A4B00366A31 /* Frameworks */,
@@ -176,9 +176,9 @@
 			dependencies = (
 				9865F9911FF10A4B00366A31 /* PBXTargetDependency */,
 			);
-			name = GenericARKitUITests;
+			name = ARKitSampleUITests;
 			productName = GenericARKitUITests;
-			productReference = 9865F98F1FF10A4B00366A31 /* GenericARKitUITests.xctest */;
+			productReference = 9865F98F1FF10A4B00366A31 /* ARKitSampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9865F96B1FF10A4B00366A31 /* Build configuration list for PBXProject "GenericARKit" */;
+			buildConfigurationList = 9865F96B1FF10A4B00366A31 /* Build configuration list for PBXProject "ARKitSample" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -220,9 +220,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9865F96F1FF10A4B00366A31 /* GenericARKit */,
-				9865F9831FF10A4B00366A31 /* GenericARKitTests */,
-				9865F98E1FF10A4B00366A31 /* GenericARKitUITests */,
+				9865F96F1FF10A4B00366A31 /* ARKitSample */,
+				9865F9831FF10A4B00366A31 /* ARKitSampleTests */,
+				9865F98E1FF10A4B00366A31 /* ARKitSampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -285,12 +285,12 @@
 /* Begin PBXTargetDependency section */
 		9865F9861FF10A4B00366A31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9865F96F1FF10A4B00366A31 /* GenericARKit */;
+			target = 9865F96F1FF10A4B00366A31 /* ARKitSample */;
 			targetProxy = 9865F9851FF10A4B00366A31 /* PBXContainerItemProxy */;
 		};
 		9865F9911FF10A4B00366A31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9865F96F1FF10A4B00366A31 /* GenericARKit */;
+			target = 9865F96F1FF10A4B00366A31 /* ARKitSample */;
 			targetProxy = 9865F9901FF10A4B00366A31 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -428,10 +428,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85PYWN5SRP;
-				INFOPLIST_FILE = GenericARKit/Info.plist;
+				INFOPLIST_FILE = ARKitSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hershalle.GenericARKit;
+				PRODUCT_BUNDLE_IDENTIFIER = hershalle.ARKitSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -444,10 +444,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85PYWN5SRP;
-				INFOPLIST_FILE = GenericARKit/Info.plist;
+				INFOPLIST_FILE = ARKitSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hershalle.GenericARKit;
+				PRODUCT_BUNDLE_IDENTIFIER = hershalle.ARKitSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -461,13 +461,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85PYWN5SRP;
-				INFOPLIST_FILE = GenericARKitTests/Info.plist;
+				INFOPLIST_FILE = ARKitSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Astralink.GenericARKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = Hershalle.ARKitSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GenericARKit.app/GenericARKit";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARKitSample.app/ARKitSample";
 			};
 			name = Debug;
 		};
@@ -478,13 +478,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85PYWN5SRP;
-				INFOPLIST_FILE = GenericARKitTests/Info.plist;
+				INFOPLIST_FILE = ARKitSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Astralink.GenericARKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = Hershalle.ARKitSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GenericARKit.app/GenericARKit";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARKitSample.app/ARKitSample";
 			};
 			name = Release;
 		};
@@ -494,13 +494,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85PYWN5SRP;
-				INFOPLIST_FILE = GenericARKitUITests/Info.plist;
+				INFOPLIST_FILE = ARKitSampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Astralink.GenericARKitUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = Hershalle.ARKitSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GenericARKit;
+				TEST_TARGET_NAME = ARKitSample;
 			};
 			name = Debug;
 		};
@@ -510,20 +510,20 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85PYWN5SRP;
-				INFOPLIST_FILE = GenericARKitUITests/Info.plist;
+				INFOPLIST_FILE = ARKitSampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Astralink.GenericARKitUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = Hershalle.ARKitSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GenericARKit;
+				TEST_TARGET_NAME = ARKitSample;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9865F96B1FF10A4B00366A31 /* Build configuration list for PBXProject "GenericARKit" */ = {
+		9865F96B1FF10A4B00366A31 /* Build configuration list for PBXProject "ARKitSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9865F9961FF10A4B00366A31 /* Debug */,
@@ -532,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9865F9981FF10A4B00366A31 /* Build configuration list for PBXNativeTarget "GenericARKit" */ = {
+		9865F9981FF10A4B00366A31 /* Build configuration list for PBXNativeTarget "ARKitSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9865F9991FF10A4B00366A31 /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9865F99B1FF10A4B00366A31 /* Build configuration list for PBXNativeTarget "GenericARKitTests" */ = {
+		9865F99B1FF10A4B00366A31 /* Build configuration list for PBXNativeTarget "ARKitSampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9865F99C1FF10A4B00366A31 /* Debug */,
@@ -550,7 +550,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9865F99E1FF10A4B00366A31 /* Build configuration list for PBXNativeTarget "GenericARKitUITests" */ = {
+		9865F99E1FF10A4B00366A31 /* Build configuration list for PBXNativeTarget "ARKitSampleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9865F99F1FF10A4B00366A31 /* Debug */,

@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  GenericARKit
+//  ARKitSample
 //
 //  Created by Shai Balassiano on 25/12/2017.
 //  Copyright © 2017 Shai Balassiano. All rights reserved.
