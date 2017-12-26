@@ -12,6 +12,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {//
 
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var statusLabel: UILabel!
+    @IBOutlet var distanceLabel: UILabel!
+    @IBOutlet var measureButton: UIButton!
+    
+    var measurementStartPoint: SCNVector3?
     
     fileprivate func setupSceneView() {
         sceneView.delegate = self
@@ -78,34 +82,43 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {//
         statusLabel.text = message
     }
     
-//    @IBAction func didTap(startMeasurementButton: UIButton) {
-//        let planeTestResults = sceneView.hitTest(sceneView.center, types: .featurePoint)
-//        guard let result = planeTestResults.first else {
-//            print("faild")
-//            return
-//        }
-//
-//        let resultWorldTransform = result.worldTransform
-//        let realWorldVector = SCNVector3Make(resultWorldTransform.columns.3.x, resultWorldTransform.columns.3.y, resultWorldTransform.columns.3.z)
-//
-//        startMeasurement(from: realWorldVector)
-//    }
-//    
-//    func startMeasurement(from startPoint: SCNVector3) {
-//
-//    }
+    @IBAction func didTap(startMeasurementButton: UIButton) {
+        let planeTestResults = sceneView.hitTest(sceneView.center, types: .featurePoint)
+        guard let result = planeTestResults.first else {
+            print("faild")
+            return
+        }
+
+        let resultWorldTransform = result.worldTransform
+        let realWorldVector = SCNVector3.position(form: resultWorldTransform)
+
+        measurementStartPoint = realWorldVector
+        measureButton.setTitle("Reset", for: .normal)
+    }
+
+    
+    func measurement(from startPoint: SCNVector3) -> Float? {
+        guard let cameraTransform = sceneView.session.currentFrame?.camera.transform else {
+            return nil
+        }
+        
+        let endPoint = SCNVector3.position(form: cameraTransform)
+        let distance = startPoint.distance(vector: endPoint)
+        return distance
+    }
     
     
     // ==========================
     // MARK: - ARSessionDelegate:
     // ==========================
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
-//        DispatchQueue.main.async {
-//
-//
-//
-//        }
-//        statusLabel.text = frame.camera.transform.debugDescription
+        DispatchQueue.main.async {
+
+            guard let measurementStartPoint = self.measurementStartPoint, let distance = self.measurement(from: measurementStartPoint)?.description else {
+                return
+            }
+            self.distanceLabel.text = distance
+        }
     }
     // ==========================
     // MARK: - ARSessionObserver:
