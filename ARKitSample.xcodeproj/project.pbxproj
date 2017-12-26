@@ -14,6 +14,7 @@
 		9865F97E1FF10A4B00366A31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9865F97C1FF10A4B00366A31 /* LaunchScreen.storyboard */; };
 		9865F9891FF10A4B00366A31 /* GenericARKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9865F9881FF10A4B00366A31 /* GenericARKitTests.swift */; };
 		9865F9941FF10A4B00366A31 /* GenericARKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9865F9931FF10A4B00366A31 /* GenericARKitUITests.swift */; };
+		9865F9A41FF26DA200366A31 /* SCNVector3+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9865F9A31FF26DA200366A31 /* SCNVector3+Operations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9865F98F1FF10A4B00366A31 /* ARKitSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARKitSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9865F9931FF10A4B00366A31 /* GenericARKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericARKitUITests.swift; sourceTree = "<group>"; };
 		9865F9951FF10A4B00366A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9865F9A31FF26DA200366A31 /* SCNVector3+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Operations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				9865F9731FF10A4B00366A31 /* AppDelegate.swift */,
 				9865F9751FF10A4B00366A31 /* ViewController.swift */,
+				9865F9A31FF26DA200366A31 /* SCNVector3+Operations.swift */,
 				9865F9771FF10A4B00366A31 /* Main.storyboard */,
 				9865F97A1FF10A4B00366A31 /* Assets.xcassets */,
 				9865F97C1FF10A4B00366A31 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9865F9761FF10A4B00366A31 /* ViewController.swift in Sources */,
+				9865F9A41FF26DA200366A31 /* SCNVector3+Operations.swift in Sources */,
 				9865F9741FF10A4B00366A31 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
