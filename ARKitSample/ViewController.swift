@@ -8,17 +8,13 @@
 
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate, ARSessionObserver {//ARSKViewDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {//ARSKViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var statusLabel: UILabel!
     
     fileprivate func setupSceneView() {
         sceneView.delegate = self
-        
-//        let emptyScene = SKScene()
-//        emptyScene.scaleMode = .resizeFill
-//        emptyScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         sceneView.showsStatistics = true
     }
@@ -27,6 +23,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionObserver {//
         super.viewDidLoad()
 
         setupSceneView()
+        sceneView.session.delegate = self
     }
     
     fileprivate func setupSceneConfiguration() {
@@ -80,6 +77,36 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionObserver {//
         
         statusLabel.text = message
     }
+    
+//    @IBAction func didTap(startMeasurementButton: UIButton) {
+//        let planeTestResults = sceneView.hitTest(sceneView.center, types: .featurePoint)
+//        guard let result = planeTestResults.first else {
+//            print("faild")
+//            return
+//        }
+//
+//        let resultWorldTransform = result.worldTransform
+//        let realWorldVector = SCNVector3Make(resultWorldTransform.columns.3.x, resultWorldTransform.columns.3.y, resultWorldTransform.columns.3.z)
+//
+//        startMeasurement(from: realWorldVector)
+//    }
+//    
+//    func startMeasurement(from startPoint: SCNVector3) {
+//
+//    }
+    
+    
+    // ==========================
+    // MARK: - ARSessionDelegate:
+    // ==========================
+    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+//        DispatchQueue.main.async {
+//
+//
+//
+//        }
+//        statusLabel.text = frame.camera.transform.debugDescription
+    }
     // ==========================
     // MARK: - ARSessionObserver:
     // ==========================
@@ -107,7 +134,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionObserver {//
     // ==========================
     // MARK: - ARSCNViewDelegate:
     // ==========================
-    
     func session(_ session: ARSession, didFailWithError error: Error) {
         statusLabel.text = "Session Failed - probably due to lack of camera access"
         resetTracking()
@@ -122,9 +148,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionObserver {//
         resetTracking()
     }
     
-
-    var planeNodes = [UUID: SCNNode]()
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        
         func constructPlaneNode(planeAnchor: ARPlaneAnchor) -> SCNNode {
             let planeGeometry = SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z))
             let planeNode = SCNNode(geometry: planeGeometry)
@@ -146,36 +171,40 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionObserver {//
             return
         }
         
-        
         let planeNode = constructPlaneNode(planeAnchor: planeAnchor)
-        planeNodes[anchor.identifier] = planeNode
         node.addChildNode(planeNode)
     }
 
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard let planeAnchor = anchor as? ARPlaneAnchor, let planeNode = planeNodes[anchor.identifier], let planeGeometry = planeNode.geometry as? SCNPlane else {
-            return
-        }
-
-        func update(planNode: SCNNode, from planeAnchor: ARPlaneAnchor) {
-            // Plane estimation may shift the center of a plane relative to its anchor's transform.
-            planeNode.simdPosition = float3(planeAnchor.center.x, 0, planeAnchor.center.z)
+        DispatchQueue.main.async {
+            guard let planeAnchor = anchor as? ARPlaneAnchor, let planeNode = self.sceneView.node(for: anchor)?.childNodes.first, let planeGeometry = planeNode.geometry as? SCNPlane else {
+                return
+            }
             
-            /*
-             Plane estimation may extend the size of the plane, or combine previously detected
-             planes into a larger one. In the latter case, `ARSCNView` automatically deletes the
-             corresponding node for one plane, then calls this method to update the size of
-             the remaining plane.
-             */
-            planeGeometry.width = CGFloat(planeAnchor.extent.x)
-            planeGeometry.height = CGFloat(planeAnchor.extent.z)
+            func update(planNode: SCNNode, from planeAnchor: ARPlaneAnchor) {
+                // Plane estimation may shift the center of a plane relative to its anchor's transform.
+                planeNode.simdPosition = float3(planeAnchor.center.x, 0, planeAnchor.center.z)
+                
+                /*
+                 Plane estimation may extend the size of the plane, or combine previously detected
+                 planes into a larger one. In the latter case, `ARSCNView` automatically deletes the
+                 corresponding node for one plane, then calls this method to update the size of
+                 the remaining plane.
+                 */
+                planeGeometry.width = CGFloat(planeAnchor.extent.x)
+                planeGeometry.height = CGFloat(planeAnchor.extent.z)
+            }
+            
+            update(planNode: planeNode, from: planeAnchor)
         }
-        
-        update(planNode: planeNode, from: planeAnchor)
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
-        planeNodes[anchor.identifier] = nil
+        DispatchQueue.main.async {
+            for childNode in node.childNodes {
+                childNode.removeFromParentNode()
+            }
+        }
     }
     
 //    func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
