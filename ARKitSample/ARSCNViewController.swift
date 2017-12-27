@@ -27,7 +27,8 @@ class ARSCNViewController: NSObject {
         case sessionResumed
     }
     
-    var measurementStartPoint: SCNVector3?
+    var measurementStartTransform: matrix_float4x4?
+//    var measurementStartPoint: SCNVector3?
     weak var delegate: ARSCNViewControllerDelegate?
     
     private weak var sceneView: ARSCNView!
@@ -181,11 +182,12 @@ extension ARSCNViewController: ARSCNViewDelegate {
 }
 
 extension ARSCNViewController: ARSessionDelegate {
-    private func measurement(from startPoint: SCNVector3) -> Float? {
+    private func distance(from startTransform: matrix_float4x4) -> Float? {
         guard let cameraTransform = sceneView.session.currentFrame?.camera.transform else {
             return nil
         }
         
+        let startPoint = SCNVector3.position(form: startTransform)
         let endPoint = SCNVector3.position(form: cameraTransform)
         let distance = startPoint.distance(vector: endPoint)
         return distance
@@ -193,7 +195,7 @@ extension ARSCNViewController: ARSessionDelegate {
     
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         DispatchQueue.main.async {
-            guard let measurementStartPoint = self.measurementStartPoint, let distance = self.measurement(from: measurementStartPoint) else {
+            guard let measurementStartTransform = self.measurementStartTransform, let distance = self.distance(from: measurementStartTransform) else {
                 return
             }
             

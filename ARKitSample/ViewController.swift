@@ -38,15 +38,12 @@ class ViewController: UIViewController {
     
     @IBAction func didTap(startMeasurementButton: UIButton) {
         let planeTestResults = sceneView.hitTest(sceneView.center, types: .featurePoint)
-        guard let result = planeTestResults.first else {
+        guard let resultWorldTransform = planeTestResults.first?.worldTransform else {
             print("faild")
             return
         }
         
-        let resultWorldTransform = result.worldTransform
-        let realWorldVector = SCNVector3.position(form: resultWorldTransform)
-        
-        arSCNViewController.measurementStartPoint = realWorldVector
+        arSCNViewController.measurementStartTransform = resultWorldTransform
         measureButton.setTitle("Reset", for: .normal)
     }
 }
