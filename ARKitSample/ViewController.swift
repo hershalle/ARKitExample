@@ -10,18 +10,21 @@ import UIKit
 import ARKit
 
 class ViewController: UIViewController {
-    
+
+//    @IBOutlet private var videoCameraView: VideoCameraView!
     @IBOutlet private var sceneView: ARSCNView!
     @IBOutlet private var distanceLabel: UILabel!
     @IBOutlet private var statusLabel: UILabel!
     @IBOutlet private var measureButton: UIButton!
 
-    private var arSCNViewController: ARSCNViewController!
+    private let videoCameraQueue: DispatchQueue = DispatchQueue(label: "videoCameraQueue", qos: .userInteractive)
+    
+    private var arSCNViewController: ARSCNViewManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        arSCNViewController = ARSCNViewController(sceneView: sceneView)
+        arSCNViewController = ARSCNViewManager(sceneView: sceneView)
         arSCNViewController.delegate = self
     }
     
@@ -37,23 +40,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTap(startMeasurementButton: UIButton) {
-        let planeTestResults = sceneView.hitTest(sceneView.center, types: .featurePoint)
-        guard let resultWorldTransform = planeTestResults.first?.worldTransform else {
-            print("faild")
-            return
-        }
-        
-        arSCNViewController.measurementStartTransform = resultWorldTransform
+        arSCNViewController.tracking = true
+        arSCNViewController.startSendingDistanceFromCenterPoint()
         measureButton.setTitle("Reset", for: .normal)
     }
 }
 
-extension ViewController: ARSCNViewControllerDelegate {
-    func arSCNViewController(_ arSCNViewController: ARSCNViewController, didUpdate distance: Float) {
+extension ViewController: ARSCNViewManagerDelegate {
+    func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate distance: Float) {
         distanceLabel.text = distance.description
     }
     
-    func arSCNViewController(_ arSCNViewController: ARSCNViewController, didUpdate state: ARSCNViewController.State) {
+    func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate state: ARSCNViewManager.State) {
         let message: String
         switch state {
         case .trackingNormalWithAnchors:
@@ -77,6 +75,15 @@ extension ViewController: ARSCNViewControllerDelegate {
         }
         
         statusLabel.text = message
+    }
+    
+    
+    func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate sampleBuffer: CMSampleBuffer) {
+//        videoCameraView.videoLayer.enqueue(sampleBuffer)
+    }
+    
+    func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate trackingTransform: matrix_float4x4) {
+        
     }
 }
 

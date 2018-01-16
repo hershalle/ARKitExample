@@ -14,65 +14,14 @@ extension SCNVector3
     static func position(form transform: matrix_float4x4) -> SCNVector3 {
         return SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
     }
-//    /**
-//     * Negates the vector described by SCNVector3 and returns
-//     * the result as a new SCNVector3.
-//     */
-//    func negate() -> SCNVector3 {
-//        return self * -1
-//    }
-//
-//    /**
-//     * Negates the vector described by SCNVector3
-//     */
-//    mutating func negated() -> SCNVector3 {
-//        self = negate()
-//        return self
-//    }
-//
-//    /**
-//     * Returns the length (magnitude) of the vector described by the SCNVector3
-//     */
+
     func length() -> Float {
         return sqrtf(x*x + y*y + z*z)
     }
-//
-//    /**
-//     * Normalizes the vector described by the SCNVector3 to length 1.0 and returns
-//     * the result as a new SCNVector3.
-//     */
-//    func normalized() -> SCNVector3 {
-//        return self / length()
-//    }
-//
-//    /**
-//     * Normalizes the vector described by the SCNVector3 to length 1.0.
-//     */
-//    mutating func normalize() -> SCNVector3 {
-//        self = normalized()
-//        return self
-//    }
-//
-//    /**
-//     * Calculates the distance between two SCNVector3. Pythagoras!
-//     */
+
     func distance(vector: SCNVector3) -> Float {
         return (self - vector).length()
     }
-//
-//    /**
-//     * Calculates the dot product between two SCNVector3.
-//     */
-//    func dot(vector: SCNVector3) -> Float {
-//        return x * vector.x + y * vector.y + z * vector.z
-//    }
-//
-//    /**
-//     * Calculates the cross product between two SCNVector3.
-//     */
-//    func cross(vector: SCNVector3) -> SCNVector3 {
-//        return SCNVector3Make(y * vector.z - z * vector.y, z * vector.x - x * vector.z, x * vector.y - y * vector.x)
-//    }
 }
 //
 ///**

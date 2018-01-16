@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,21 +14,21 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ARKitSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zR-TJ-Kqz">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYF-36-9S4">
-                                <rect key="frame" x="44" y="525" width="59" height="30"/>
+                                <rect key="frame" x="44" y="626" width="59" height="30"/>
                                 <state key="normal" title="Measure"/>
                                 <connections>
                                     <action selector="didTapWithStartMeasurementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V5u-59-fy1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kj4-9M-nJ3">
-                                <rect key="frame" x="44" y="563" width="49.5" height="60"/>
+                                <rect key="frame" x="44" y="664" width="49.5" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.060326804577464789" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="L20-ky-STe"/>
@@ -38,21 +38,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFe-wJ-UHz">
-                                <rect key="frame" x="44" y="496" width="67" height="21"/>
+                                <rect key="frame" x="44" y="597" width="67" height="21"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.15649757922535212" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlZ-xl-RLV">
-                                <rect key="frame" x="111" y="525" width="30" height="30"/>
+                                <rect key="frame" x="111" y="626" width="30" height="30"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VYF-36-9S4" firstAttribute="top" secondItem="ZFe-wJ-UHz" secondAttribute="bottom" constant="8" id="1GU-hL-sb0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5zR-TJ-Kqz" secondAttribute="trailing" id="GLl-j0-Tp8"/>
                             <constraint firstItem="5zR-TJ-Kqz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="H4V-M1-efE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5zR-TJ-Kqz" secondAttribute="trailing" id="ItS-IN-Axm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kj4-9M-nJ3" secondAttribute="trailing" constant="44" id="J9a-Ms-g1X"/>
                             <constraint firstItem="5zR-TJ-Kqz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M6S-Ha-CRk"/>
                             <constraint firstItem="kj4-9M-nJ3" firstAttribute="leading" secondItem="VYF-36-9S4" secondAttribute="leading" id="WEN-IR-E0X"/>
@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="45"/>
+            <point key="canvasLocation" x="101.953125" y="44.53125"/>
         </scene>
     </scenes>
 </document>

@@ -8,12 +8,14 @@
 
 import ARKit
 
-protocol ARSCNViewControllerDelegate: class {
-    func arSCNViewController(_ arSCNViewController: ARSCNViewController, didUpdate distance: Float)
-    func arSCNViewController(_ arSCNViewController: ARSCNViewController, didUpdate state: ARSCNViewController.State)
+protocol ARSCNViewManagerDelegate: class {
+    func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate trackingTransform: matrix_float4x4)
+    func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate distance: Float)
+    func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate state: ARSCNViewManager.State)
+    func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate sampleBuffer: CMSampleBuffer)
 }
 
-class ARSCNViewController: NSObject {
+class ARSCNViewManager: NSObject {
     
     enum State {
         case trackingNormalWithAnchors
@@ -27,9 +29,9 @@ class ARSCNViewController: NSObject {
         case sessionResumed
     }
     
-    var measurementStartTransform: matrix_float4x4?
-//    var measurementStartPoint: SCNVector3?
-    weak var delegate: ARSCNViewControllerDelegate?
+    var tracking = true
+    private var measurementStartTransform: matrix_float4x4?
+    weak var delegate: ARSCNViewManagerDelegate?
     
     private weak var sceneView: ARSCNView!
     init(sceneView: ARSCNView) {
@@ -41,13 +43,20 @@ class ARSCNViewController: NSObject {
     
     private func setupSceneView() {
         sceneView.delegate = self
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         sceneView.showsStatistics = true
         sceneView.session.delegate = self
+        
+//        
+//        let boxGeometry = SCNBox(width: 100, height: 100, length: 100, chamferRadius: 0)
+//        let box = SCNNode(geometry: boxGeometry)
+//        box.opacity = 1
+//        box.position = SCNVector3(1, 1, 1)
     }
     
     private func sceneConfiguration() -> ARConfiguration {
         let configuration = ARWorldTrackingConfiguration()
+        configuration.worldAlignment = .gravityAndHeading
         configuration.planeDetection = .horizontal
         return configuration
     }
@@ -55,10 +64,20 @@ class ARSCNViewController: NSObject {
     func start() {
         let configuration = sceneConfiguration()
         sceneView.session.run(configuration)
+        sceneView.session.delegate = self
     }
     
     func pause() {
         sceneView.session.pause()
+    }
+    
+    func startSendingDistanceFromCenterPoint() {
+        let planeTestResults = sceneView.hitTest(sceneView.center, types: .featurePoint)
+        measurementStartTransform = planeTestResults.first?.worldTransform
+    }
+    
+    func startSendingTrackingFromCurrentPostion() {
+        measurementStartTransform = sceneView.session.currentFrame?.camera.transform
     }
     
     private func resetTracking() {
@@ -67,7 +86,7 @@ class ARSCNViewController: NSObject {
     }
 }
 
-extension ARSCNViewController: ARSCNViewDelegate {
+extension ARSCNViewManager: ARSCNViewDelegate {
     private func state(from trackingState: ARCamera.TrackingState, in frame: ARFrame) -> State {
         let state: State
         
@@ -95,23 +114,6 @@ extension ARSCNViewController: ARSCNViewDelegate {
         }
         
         let state = self.state(from: camera.trackingState, in: currentFrame)
-        delegate?.arSCNViewController(self, didUpdate: state)
-    }
-    
-    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-        guard let currentFrame = session.currentFrame else {
-            return
-        }
-        let state = self.state(from: currentFrame.camera.trackingState, in: currentFrame)
-        delegate?.arSCNViewController(self, didUpdate: state)
-    }
-    
-    func session(_ session: ARSession, didRemove anchors: [ARAnchor]) {
-        guard let currentFrame = session.currentFrame else {
-            return
-        }
-
-        let state = self.state(from: currentFrame.camera.trackingState, in: currentFrame)
         delegate?.arSCNViewController(self, didUpdate: state)
     }
     
@@ -181,7 +183,7 @@ extension ARSCNViewController: ARSCNViewDelegate {
     }
 }
 
-extension ARSCNViewController: ARSessionDelegate {
+extension ARSCNViewManager: ARSessionDelegate {
     private func distance(from startTransform: matrix_float4x4) -> Float? {
         guard let cameraTransform = sceneView.session.currentFrame?.camera.transform else {
             return nil
@@ -194,12 +196,52 @@ extension ARSCNViewController: ARSessionDelegate {
     }
     
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
-        DispatchQueue.main.async {
-            guard let measurementStartTransform = self.measurementStartTransform, let distance = self.distance(from: measurementStartTransform) else {
-                return
-            }
-            
-            self.delegate?.arSCNViewController(self, didUpdate: distance)
+        func descriptionFormat(from frame: ARFrame) -> CMVideoFormatDescription {
+            let pixelBuffer = frame.capturedImage
+            var videoFormatDescription: CMVideoFormatDescription?
+            CMVideoFormatDescriptionCreateForImageBuffer(kCFAllocatorDefault, pixelBuffer, &videoFormatDescription)
+            return videoFormatDescription!
         }
+
+        func sampleBuffer(from frame: ARFrame) -> CMSampleBuffer {
+            let pixelBuffer = frame.capturedImage
+            let videoFormatDescription = descriptionFormat(from: frame)
+
+            let scale: Double = 1000000000
+            let presentationTimeStamp = CMTime(value: CMTimeValue(frame.timestamp * scale), timescale: CMTimeScale(scale))
+            var timingInfo = CMSampleTimingInfo(duration: CMTime(), presentationTimeStamp: presentationTimeStamp, decodeTimeStamp: CMTime())
+
+            var sampleBuffer: CMSampleBuffer?
+            CMSampleBufferCreateReadyWithImageBuffer(kCFAllocatorDefault, pixelBuffer, videoFormatDescription, &timingInfo, &sampleBuffer)
+            return sampleBuffer!
+        }
+
+        func sendSampleBufferToDelegate() {
+            let newSampleBuffer = sampleBuffer(from: frame)
+            DispatchQueue.main.async {
+                self.delegate?.arSCNViewController(self, didUpdate: newSampleBuffer)
+            }
+        }
+        
+        func sendDistanceToDelegate() {
+            DispatchQueue.main.async {
+                if let measurementStartTransform = self.measurementStartTransform, let distance = self.distance(from: measurementStartTransform) {
+                    self.delegate?.arSCNViewController(self, didUpdate: distance)
+                }
+            }
+        }
+        
+        func sendTrackingToDelegate() {
+            DispatchQueue.main.async {
+                guard let measurementStartTransform = self.measurementStartTransform, let currentCameraTransform = self.sceneView.session.currentFrame?.camera.transform else {
+                    return
+                }
+                
+                let trackingTransform = measurementStartTransform - currentCameraTransform
+                self.delegate?.arSCNViewController(self, didUpdate: trackingTransform)
+            }
+        }
+        
+        sendTrackingToDelegate()
     }
 }
