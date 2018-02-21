@@ -18,12 +18,20 @@ protocol ARSCNViewManagerDelegate: class {
 class ARSCNViewManager: NSObject {
     
     enum State {
+        enum Reason {
+            case initializing
+            case excessiveMotion
+            case insufficientFeatures
+            
+            @available(iOS 11.3, *)
+            case relocalizing
+        }
+        
         case trackingNormalWithAnchors
         case trackingNormalWithoutAnchors
         case trackingNotAvailable
-        case trackingIsLimitedBecouseExcessiveMotion
-        case trackingIsLimitedBecouseInsufficientFeatures
-        case initializing
+        case trackingIsLimited(Reason)
+        
         case sessionFail(error: Error)
         case sessionInterrupted
         case sessionResumed
@@ -57,7 +65,7 @@ class ARSCNViewManager: NSObject {
     private func sceneConfiguration() -> ARConfiguration {
         let configuration = ARWorldTrackingConfiguration()
         configuration.worldAlignment = .gravityAndHeading
-        configuration.planeDetection = .horizontal
+        configuration.planeDetection = [.horizontal, .vertical]
         return configuration
     }
     
@@ -98,11 +106,13 @@ extension ARSCNViewManager: ARSCNViewDelegate {
         case .notAvailable:
             state = .trackingNotAvailable
         case .limited(.excessiveMotion):
-            state = .trackingIsLimitedBecouseExcessiveMotion
+            state = .trackingIsLimited(.excessiveMotion)
         case .limited(.insufficientFeatures):
-            state = .trackingIsLimitedBecouseInsufficientFeatures
+            state = .trackingIsLimited(.insufficientFeatures)
         case .limited(.initializing):
-            state = .initializing
+            state = .trackingIsLimited(.initializing)
+        case .limited(.relocalizing):
+            state = .trackingIsLimited(.relocalizing)
         }
         
         return state

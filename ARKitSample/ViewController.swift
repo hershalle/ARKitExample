@@ -60,12 +60,14 @@ extension ViewController: ARSCNViewManagerDelegate {
             message = "Move the device around to detect horizontal surfaces."
         case .trackingNotAvailable:
             message = "Tracking unavailable."
-        case .trackingIsLimitedBecouseExcessiveMotion:
+        case .trackingIsLimited(.excessiveMotion):
             message = "Tracking limited - Move the device more slowly."
-        case .trackingIsLimitedBecouseInsufficientFeatures:
+        case .trackingIsLimited(.insufficientFeatures):
             message = "Tracking limited - Point the device at an area with visible surface detail, or improve lighting conditions."
-        case .initializing:
+        case .trackingIsLimited(.initializing):
             message = "Initializing AR session."
+        case .trackingIsLimited(.relocalizing):
+            message = "Tracking is limited due to a relocalization in progress"
         case .sessionFail(_):
             message = "Session Failed - probably due to lack of camera access"
         case .sessionInterrupted:
@@ -77,13 +79,12 @@ extension ViewController: ARSCNViewManagerDelegate {
         statusLabel.text = message
     }
     
-    
     func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate sampleBuffer: CMSampleBuffer) {
 //        videoCameraView.videoLayer.enqueue(sampleBuffer)
     }
-    
+
     func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate trackingTransform: matrix_float4x4) {
-        
+
     }
 }
 
