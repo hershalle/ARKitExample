@@ -11,7 +11,6 @@ import ARKit
 
 class ViewController: UIViewController {
 
-//    @IBOutlet private var videoCameraView: VideoCameraView!
     @IBOutlet private var sceneView: ARSCNView!
     @IBOutlet private var distanceLabel: UILabel!
     @IBOutlet private var statusLabel: UILabel!
@@ -79,12 +78,7 @@ extension ViewController: ARSCNViewManagerDelegate {
         statusLabel.text = message
     }
     
-    func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate sampleBuffer: CMSampleBuffer) {
-//        videoCameraView.videoLayer.enqueue(sampleBuffer)
-    }
-
-    func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate trackingTransform: matrix_float4x4) {
-
-    }
+    func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate sampleBuffer: CMSampleBuffer) {}
+    func arSCNViewController(_ arSCNViewController: ARSCNViewManager, didUpdate trackingTransform: matrix_float4x4) {}
 }
 

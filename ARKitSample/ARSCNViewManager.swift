@@ -54,12 +54,6 @@ class ARSCNViewManager: NSObject {
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         sceneView.showsStatistics = true
         sceneView.session.delegate = self
-        
-//        
-//        let boxGeometry = SCNBox(width: 100, height: 100, length: 100, chamferRadius: 0)
-//        let box = SCNNode(geometry: boxGeometry)
-//        box.opacity = 1
-//        box.position = SCNVector3(1, 1, 1)
     }
     
     private func sceneConfiguration() -> ARConfiguration {

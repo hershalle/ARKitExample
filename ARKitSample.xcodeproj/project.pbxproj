@@ -16,7 +16,6 @@
 		9865F9A41FF26DA200366A31 /* SCNVector3+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9865F9A31FF26DA200366A31 /* SCNVector3+Operations.swift */; };
 		9865F9A61FF2958300366A31 /* ARSCNViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9865F9A51FF2958300366A31 /* ARSCNViewManager.swift */; };
 		9865F9AA1FF2AE4E00366A31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9865F9A91FF2AE4E00366A31 /* ViewController.swift */; };
-		9865F9AC1FF3FAFF00366A31 /* VideoCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9865F9AB1FF3FAFF00366A31 /* VideoCameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		9865F9A31FF26DA200366A31 /* SCNVector3+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Operations.swift"; sourceTree = "<group>"; };
 		9865F9A51FF2958300366A31 /* ARSCNViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSCNViewManager.swift; sourceTree = "<group>"; };
 		9865F9A91FF2AE4E00366A31 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9865F9AB1FF3FAFF00366A31 /* VideoCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +106,6 @@
 				9865F9771FF10A4B00366A31 /* Main.storyboard */,
 				9865F9A51FF2958300366A31 /* ARSCNViewManager.swift */,
 				9865F9A91FF2AE4E00366A31 /* ViewController.swift */,
-				9865F9AB1FF3FAFF00366A31 /* VideoCameraView.swift */,
 				9865F97A1FF10A4B00366A31 /* Assets.xcassets */,
 				9865F97C1FF10A4B00366A31 /* LaunchScreen.storyboard */,
 				9865F97F1FF10A4B00366A31 /* Info.plist */,
@@ -268,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9865F9AC1FF3FAFF00366A31 /* VideoCameraView.swift in Sources */,
 				9865F9A61FF2958300366A31 /* ARSCNViewManager.swift in Sources */,
 				9865F9A41FF26DA200366A31 /* SCNVector3+Operations.swift in Sources */,
 				9865F9AA1FF2AE4E00366A31 /* ViewController.swift in Sources */,
