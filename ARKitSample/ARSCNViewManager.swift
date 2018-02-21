@@ -82,6 +82,13 @@ class ARSCNViewManager: NSObject {
         measurementStartTransform = sceneView.session.currentFrame?.camera.transform
     }
     
+    func setOriginToCurrentCameraPosition() {
+        guard let cameraTransform = sceneView.session.currentFrame?.camera.transform else {
+            return
+        }
+        sceneView.session.setWorldOrigin(relativeTransform: cameraTransform)
+    }
+    
     private func resetTracking() {
         let configuration = sceneConfiguration()
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
@@ -138,12 +145,11 @@ extension ARSCNViewManager: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         
         func constructPlaneNode(planeAnchor: ARPlaneAnchor) -> SCNNode {
-            let planeGeometry = SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z))
+            let planeGeometry = ARSCNPlaneGeometry(device: sceneView.device!)!
+            planeGeometry.update(from: planeAnchor.geometry)
+            
             let planeNode = SCNNode(geometry: planeGeometry)
             planeNode.simdPosition = float3(planeAnchor.center.x, 0, planeAnchor.center.z)
-            
-            //SCNPlane is vertically oriented in its local coordinate space, so rotate the plane to match the horizontal orientation of `ARPlaneAnchor`.
-            planeNode.eulerAngles.x = -.pi / 2
             
             // Make the plane visualization semitransparent to clearly show real-world placement.
             planeNode.opacity = 0.25
@@ -211,9 +217,10 @@ extension ARSCNViewManager: ARSessionDelegate {
             let pixelBuffer = frame.capturedImage
             let videoFormatDescription = descriptionFormat(from: frame)
 
-            let scale: Double = 1000000000
-            let presentationTimeStamp = CMTime(value: CMTimeValue(frame.timestamp * scale), timescale: CMTimeScale(scale))
-            var timingInfo = CMSampleTimingInfo(duration: CMTime(), presentationTimeStamp: presentationTimeStamp, decodeTimeStamp: CMTime())
+            let scale = CMTimeScale(NSEC_PER_SEC)
+            let value = Int64(frame.timestamp * Double(scale))
+            let presentationTimeStamp = CMTime(value: CMTimeValue(value), timescale: scale)
+            var timingInfo = CMSampleTimingInfo(duration: kCMTimeInvalid, presentationTimeStamp: presentationTimeStamp, decodeTimeStamp: kCMTimeInvalid)
 
             var sampleBuffer: CMSampleBuffer?
             CMSampleBufferCreateReadyWithImageBuffer(kCFAllocatorDefault, pixelBuffer, videoFormatDescription, &timingInfo, &sampleBuffer)

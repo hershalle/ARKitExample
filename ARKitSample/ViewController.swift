@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet private var distanceLabel: UILabel!
     @IBOutlet private var statusLabel: UILabel!
     @IBOutlet private var measureButton: UIButton!
+    @IBOutlet private var setOriginButton: UIButton!
 
     private let videoCameraQueue: DispatchQueue = DispatchQueue(label: "videoCameraQueue", qos: .userInteractive)
     
@@ -42,6 +43,10 @@ class ViewController: UIViewController {
         arSCNViewController.tracking = true
         arSCNViewController.startSendingDistanceFromCenterPoint()
         measureButton.setTitle("Reset", for: .normal)
+    }
+    
+    @IBAction func didTap(setOriginButton: UIButton) {
+        arSCNViewController.setOriginToCurrentCameraPosition()
     }
 }
 
