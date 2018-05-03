@@ -165,16 +165,20 @@ extension ARSCNViewManager: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         
         func constructPlaneNode(planeAnchor: ARPlaneAnchor) -> SCNNode {
+            #if targetEnvironment(simulator)
+                return SCNNode()
+            #else
             let planeGeometry = ARSCNPlaneGeometry(device: sceneView.device!)!
             planeGeometry.update(from: planeAnchor.geometry)
-            
+
             let planeNode = SCNNode(geometry: planeGeometry)
             planeNode.simdPosition = float3(planeAnchor.center.x, 0, planeAnchor.center.z)
-            
+
             // Make the plane visualization semitransparent to clearly show real-world placement.
             planeNode.opacity = 0.25
-            
+
             return planeNode
+            #endif
         }
         
         guard let planeAnchor = anchor as? ARPlaneAnchor else {
