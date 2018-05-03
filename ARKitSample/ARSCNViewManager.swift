@@ -93,6 +93,26 @@ class ARSCNViewManager: NSObject {
         let configuration = sceneConfiguration()
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
+
+    func tempTest() {
+        let projectionMatrix = sceneView.session.currentFrame!.camera.projectionMatrix(for: UIInterfaceOrientation.landscapeRight, viewportSize: sceneView.bounds.size, zNear: -1, zFar: 1)
+        let yScale = projectionMatrix[1,1] // = 1/tan(fovy/2)
+        let yFovDegrees = 2 * atan(1/yScale) * 180/Float.pi
+        let imageResolution = sceneView.session.currentFrame!.camera.imageResolution
+        let xFovDegrees = yFovDegrees * Float(imageResolution.width / imageResolution.height)
+        let aspectRatio = Float(imageResolution.width / imageResolution.height)
+
+        print("yFovDegrees: \(yFovDegrees), aspectRatio: \(aspectRatio)")
+
+//        // find fov
+//        let projectionMatrix = sceneView.session.currentFrame!.camera.projectionMatrix
+//        let yScale = projectionMatrix[1,1]
+//        let yFov = 2 * atan(1 / yScale) // in radians
+//        let yFovDegrees = yFov * 180 / Float.pi
+//
+//        let imageResolution = session.currentFrame!.camera.imageResolution
+//        let xFov = yFov * Float(imageResolution.width / imageResolution.height)
+    }
 }
 
 extension ARSCNViewManager: ARSCNViewDelegate {
@@ -167,17 +187,20 @@ extension ARSCNViewManager: ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         DispatchQueue.main.async {
-            guard let planeAnchor = anchor as? ARPlaneAnchor, let planeNode = self.sceneView.node(for: anchor)?.childNodes.first, let planeGeometry = planeNode.geometry as? SCNPlane else {
+            
+            guard let planeAnchor = anchor as? ARPlaneAnchor, let planeNode = self.sceneView.node(for: anchor)?.childNodes.first, let planeGeometry = planeNode.geometry as? ARSCNPlaneGeometry else {
                 return
             }
             
             func update(planNode: SCNNode, from planeAnchor: ARPlaneAnchor) {
                 // Plane estimation may shift the center of a plane relative to its anchor's transform.
-                planeNode.simdPosition = float3(planeAnchor.center.x, 0, planeAnchor.center.z)
-                
+//                planeNode.simdPosition = float3(planeAnchor.center.x, 0, planeAnchor.center.z)
+
                 //Plane estimation may extend the size of the plane, or combine previously detected planes into a larger one. In the latter case, `ARSCNView` automatically deletes the corresponding node for one plane, then calls this method to update the size of the remaining plane.
-                planeGeometry.width = CGFloat(planeAnchor.extent.x)
-                planeGeometry.height = CGFloat(planeAnchor.extent.z)
+                
+//                planeGeometry.update(from: <#T##ARPlaneGeometry#>)
+//                planeGeometry.width = CGFloat(planeAnchor.extent.x)
+//                planeGeometry.height = CGFloat(planeAnchor.extent.z)
             }
             
             update(planNode: planeNode, from: planeAnchor)

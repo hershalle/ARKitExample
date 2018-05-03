@@ -1,0 +1,849 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02F5A373986791866025A05DFA35567D /* Bundle+FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D6D81072180ED3F47AF7DCCB03C85A /* Bundle+FileResource.swift */; };
+		053A36B55E4926579BB69F9A3EB02FDC /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40211590987013771B12A9E6A205A83 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */; };
+		10A83EB5CC00B8823FC03736037162BE /* UITableView+ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF282C947A66169963DB7D70DDBDB63 /* UITableView+ReuseIdentifierProtocol.swift */; };
+		1433DC84197AC5827E63798901FBEEB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1B35C1935D3F3DB57CCCCCAD4A061B00 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2C8DA3EB10C94D7453543B2524179 /* ReuseIdentifierProtocol.swift */; };
+		2B990F43B57684086115EA08462098C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		2EB477F1ACD82760B565AFE947C3B624 /* R.swift.Library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A657AE49EBBF30AC3B1FEBB3117B4866 /* R.swift.Library-dummy.m */; };
+		3064D644DA8FC508084FDD5C6F65657F /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F324714A97134D346B7739CDEE9708E /* Validatable.swift */; };
+		3089020AA6047DF76E4965EB9E20F633 /* StoryboardResourceWithInitialController+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D350F31915F1F04EE538BCAFC0B901 /* StoryboardResourceWithInitialController+UIKit.swift */; };
+		3854255857A278B80775486DBBC48E8B /* NibResource+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473D600D3EE4C4A4FD477592C9C3979B /* NibResource+UIKit.swift */; };
+		39AC473B54B7051DC01F054FE09C0116 /* ColorPaletteItemResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262BE8DC53783F325DC414EF8BE5A267 /* ColorPaletteItemResource.swift */; };
+		3DC6ED9194CFFE0A66163E0607D06D23 /* UIViewController+StoryboardSegueIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A4252D84FFE23EA8C6D21C21C8B8B0 /* UIViewController+StoryboardSegueIdentifierProtocol.swift */; };
+		3F69D4BC4F7A21915C89F0400BC4CB12 /* ColorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED37A48DFBEA3718768A223DC302961E /* ColorResource.swift */; };
+		44F488ED36BC290919E004118D428741 /* SwiftyTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E76AF83F248E8BDC535BB635E8D379 /* SwiftyTimer-dummy.m */; };
+		45831BA4525EDA9767E9960280328ABE /* StoryboardSegueIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FBFF8487CD5CA76250229B763ACE05 /* StoryboardSegueIdentifierProtocol.swift */; };
+		527A1DF8F93AA5C349C57DD79AC197E2 /* Data+FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82D60D8DF3CDF200EE3EF3B00E5FDFD /* Data+FileResource.swift */; };
+		5401D419A47DAF70F7EC424BF43CE59B /* FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8B21F52F6299970235609CB9A63893 /* FileResource.swift */; };
+		5A3667CEEF5B7DE5189983B4F44C3AE6 /* UIColor+ColorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7600D892346DE68BD0089E062D752D /* UIColor+ColorResource.swift */; };
+		5EFE1392A6BABE4B5F328572E8DEB2A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		6460E0205F88AA5223D2FF4ED26CAAF4 /* ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE89B240371C9955C8755E633E505 /* ImageResource.swift */; };
+		6C41DCD76140D2D6DC84ABA096AE4592 /* UICollectionView+ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DC76AE4C5A4AB0F1A0337375940EB /* UICollectionView+ReuseIdentifierProtocol.swift */; };
+		7460CCE53EB0C62D92856A4CFFD28474 /* R.swift.Library-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E84A40C357216AFFBA69581075DED /* R.swift.Library-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77C806E49FE048A0DAF7B5E1762E8D2C /* UIViewController+NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC89EDAFE954139646B5FCBEA023BB1 /* UIViewController+NibResource.swift */; };
+		A39A0962038343CD5C89D53402CBCF56 /* Pods-ARKitSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4589A7F368623E9105D05597272B1D /* Pods-ARKitSample-dummy.m */; };
+		A3E18FD9543AF8E1804985FFC2C62541 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02E7ECC3AEFDA485EBF0B2C804D5FC /* SwiftyTimer.swift */; };
+		A63B4E9676B92C6954629BCFB554EA61 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E5AFAE9418087DC0673D76F45D3000 /* Identifier.swift */; };
+		B791E083E120A04F5837A4A7CC6BD42C /* SwiftyTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14C4A1E710E8F2F24E85862BA55F59B4 /* SwiftyTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B85BCFB9442D4E83A6E6EBDCF026E8B5 /* StringResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CE54138961C0FD6B1E2464D08557A /* StringResource.swift */; };
+		B8B5A299A8ABE0784BF586573DA4093B /* UIStoryboard+StoryboardViewControllerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50C3AFA31A4DD1ECF363E59FE76AEB9 /* UIStoryboard+StoryboardViewControllerResource.swift */; };
+		BF8D02A9906FF8086F972CA0195BE5F8 /* ColorPaletteItemResource+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D6EAEBDE598849469EB5B896FC8E6 /* ColorPaletteItemResource+UIKit.swift */; };
+		C771A35C67B620C9EFAE95F3EA54D8BC /* UIFont+FontResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63C0EC9B8AE2CCE037D384F0F939077 /* UIFont+FontResource.swift */; };
+		D2044BC289754D74C8A611462D0CFECA /* UINib+NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C17A0CE08527074CFBA85F85F3BD2F /* UINib+NibResource.swift */; };
+		DDC0B75FF943E5363733E236C2ED27C3 /* UIStoryboard+StoryboardResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A61861CD30D63314A796A0294614CF /* UIStoryboard+StoryboardResource.swift */; };
+		DE2FC9736942B69FBDC8F630A4D9F7F1 /* FontResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE6B582AF2B8E5A40FF050E220C438 /* FontResource.swift */; };
+		EDE7196000EF2818061FF65352CE5EF0 /* StoryboardResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613BFA254198C96D74C6EC27375E44A /* StoryboardResource.swift */; };
+		F54811B6BC3FA4640D275377728C3DA4 /* NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB272DECF3D5634780EBC79DF531AA05 /* NibResource.swift */; };
+		F5C00C05EED4E0ADE251A124033A1A57 /* Pods-ARKitSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F83611560969FEE4B27D75C3BCD4129D /* Pods-ARKitSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5FAC7594505E0E06E3989D723676160 /* UIImage+ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1027957F7F05A89030691A66942F0BD /* UIImage+ImageResource.swift */; };
+		FD8F7ED5E54425734A484EE0DC3CC014 /* StoryboardViewControllerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DB7060B4C1FD9D79F5EC3ADE5630E /* StoryboardViewControllerResource.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		555C4D94E339BA183B07BEAEAEF6FAB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12A2406B6CF0E6152DBC461586F1FE31;
+			remoteInfo = SwiftyTimer;
+		};
+		5E16B949D4C2C61452596FA1C0C4F267 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A899EDE3362F7583948C3B2E07CFD3F1;
+			remoteInfo = R.swift.Library;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09AE6B582AF2B8E5A40FF050E220C438 /* FontResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontResource.swift; path = Library/Core/FontResource.swift; sourceTree = "<group>"; };
+		0A4589A7F368623E9105D05597272B1D /* Pods-ARKitSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ARKitSample-dummy.m"; sourceTree = "<group>"; };
+		14C4A1E710E8F2F24E85862BA55F59B4 /* SwiftyTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-umbrella.h"; sourceTree = "<group>"; };
+		16F33D34C0DC1DFD08D50E2298C724F7 /* Pods_ARKitSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKitSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E76AF83F248E8BDC535BB635E8D379 /* SwiftyTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTimer-dummy.m"; sourceTree = "<group>"; };
+		24BEE181454862A53A71BD9A60E97183 /* Pods-ARKitSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARKitSample-acknowledgements.plist"; sourceTree = "<group>"; };
+		262BE8DC53783F325DC414EF8BE5A267 /* ColorPaletteItemResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPaletteItemResource.swift; path = Library/Core/ColorPaletteItemResource.swift; sourceTree = "<group>"; };
+		29E869E95DBB3BDEAAF6B03A5546617F /* R.swift.Library.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = R.swift.Library.modulemap; sourceTree = "<group>"; };
+		2EF2C8DA3EB10C94D7453543B2524179 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReuseIdentifierProtocol.swift; path = Library/Core/ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
+		300B4A9FCF936800FBFA32A3FF11DD08 /* Rswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A8150B34C5F8ED47E5B1FEA49D9DF5 /* Pods-ARKitSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ARKitSample-resources.sh"; sourceTree = "<group>"; };
+		3775491AB698459B142D68D2CFE41F8C /* R.swift.Library.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.Library.xcconfig; sourceTree = "<group>"; };
+		473D600D3EE4C4A4FD477592C9C3979B /* NibResource+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NibResource+UIKit.swift"; path = "Library/UIKit/NibResource+UIKit.swift"; sourceTree = "<group>"; };
+		48E83B7F0ECD0AC9031C08B43F0C498D /* SwiftyTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTimer.xcconfig; sourceTree = "<group>"; };
+		4C64B335DADD629B890A905FC09A6547 /* Pods-ARKitSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ARKitSample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		51D6D81072180ED3F47AF7DCCB03C85A /* Bundle+FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+FileResource.swift"; path = "Library/Foundation/Bundle+FileResource.swift"; sourceTree = "<group>"; };
+		55A61861CD30D63314A796A0294614CF /* UIStoryboard+StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+StoryboardResource.swift"; path = "Library/UIKit/UIStoryboard+StoryboardResource.swift"; sourceTree = "<group>"; };
+		5BC89EDAFE954139646B5FCBEA023BB1 /* UIViewController+NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+NibResource.swift"; path = "Library/UIKit/UIViewController+NibResource.swift"; sourceTree = "<group>"; };
+		5CF59B2A834F3A242F3D5FFF4D8D4E12 /* Pods-ARKitSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ARKitSample-frameworks.sh"; sourceTree = "<group>"; };
+		62E5AFAE9418087DC0673D76F45D3000 /* Identifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Identifier.swift; path = Library/Core/Identifier.swift; sourceTree = "<group>"; };
+		646FC2727695CBDFEFA731E74F137D38 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7360A92647B1C56D8F5F247C01236350 /* Pods-ARKitSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ARKitSample.modulemap"; sourceTree = "<group>"; };
+		76FA1DB8C4D6B8F6F2E73142669C41BD /* Pods-ARKitSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARKitSample.debug.xcconfig"; sourceTree = "<group>"; };
+		7E9D6EAEBDE598849469EB5B896FC8E6 /* ColorPaletteItemResource+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ColorPaletteItemResource+UIKit.swift"; path = "Library/UIKit/ColorPaletteItemResource+UIKit.swift"; sourceTree = "<group>"; };
+		86FBFF8487CD5CA76250229B763ACE05 /* StoryboardSegueIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardSegueIdentifierProtocol.swift; path = Library/Core/StoryboardSegueIdentifierProtocol.swift; sourceTree = "<group>"; };
+		8B1DC76AE4C5A4AB0F1A0337375940EB /* UICollectionView+ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+ReuseIdentifierProtocol.swift"; path = "Library/UIKit/UICollectionView+ReuseIdentifierProtocol.swift"; sourceTree = "<group>"; };
+		8E7600D892346DE68BD0089E062D752D /* UIColor+ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+ColorResource.swift"; path = "Library/UIKit/UIColor+ColorResource.swift"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9613BFA254198C96D74C6EC27375E44A /* StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardResource.swift; path = Library/Core/StoryboardResource.swift; sourceTree = "<group>"; };
+		99660EC2A0F404C74568952E1BDD75A8 /* SwiftyTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyTimer.modulemap; sourceTree = "<group>"; };
+		9F324714A97134D346B7739CDEE9708E /* Validatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validatable.swift; path = Library/Core/Validatable.swift; sourceTree = "<group>"; };
+		A657AE49EBBF30AC3B1FEBB3117B4866 /* R.swift.Library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "R.swift.Library-dummy.m"; sourceTree = "<group>"; };
+		A855F73EAAEEE4458DF52A3C49A689A5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA9DE0C92E75A7D1449B70F8894AD94F /* SwiftyTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2CE54138961C0FD6B1E2464D08557A /* StringResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringResource.swift; path = Library/Core/StringResource.swift; sourceTree = "<group>"; };
+		B2E7E58208FC9F0739206BB01BF9360F /* SwiftyTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-prefix.pch"; sourceTree = "<group>"; };
+		B3A4252D84FFE23EA8C6D21C21C8B8B0 /* UIViewController+StoryboardSegueIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+StoryboardSegueIdentifierProtocol.swift"; path = "Library/UIKit/UIViewController+StoryboardSegueIdentifierProtocol.swift"; sourceTree = "<group>"; };
+		B50C3AFA31A4DD1ECF363E59FE76AEB9 /* UIStoryboard+StoryboardViewControllerResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+StoryboardViewControllerResource.swift"; path = "Library/UIKit/UIStoryboard+StoryboardViewControllerResource.swift"; sourceTree = "<group>"; };
+		C63C0EC9B8AE2CCE037D384F0F939077 /* UIFont+FontResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+FontResource.swift"; path = "Library/UIKit/UIFont+FontResource.swift"; sourceTree = "<group>"; };
+		C9D350F31915F1F04EE538BCAFC0B901 /* StoryboardResourceWithInitialController+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StoryboardResourceWithInitialController+UIKit.swift"; path = "Library/UIKit/StoryboardResourceWithInitialController+UIKit.swift"; sourceTree = "<group>"; };
+		CB48CD08178F5D46BC6317155D04FCB1 /* R.swift.Library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "R.swift.Library-prefix.pch"; sourceTree = "<group>"; };
+		CF02E7ECC3AEFDA485EBF0B2C804D5FC /* SwiftyTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTimer.swift; path = Sources/SwiftyTimer.swift; sourceTree = "<group>"; };
+		D12AE89B240371C9955C8755E633E505 /* ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageResource.swift; path = Library/Core/ImageResource.swift; sourceTree = "<group>"; };
+		D16DB7060B4C1FD9D79F5EC3ADE5630E /* StoryboardViewControllerResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardViewControllerResource.swift; path = Library/Core/StoryboardViewControllerResource.swift; sourceTree = "<group>"; };
+		D95E84A40C357216AFFBA69581075DED /* R.swift.Library-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "R.swift.Library-umbrella.h"; sourceTree = "<group>"; };
+		DB272DECF3D5634780EBC79DF531AA05 /* NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NibResource.swift; path = Library/Core/NibResource.swift; sourceTree = "<group>"; };
+		DCEDF06DE23135DF19F6203C7C63FDE6 /* Pods-ARKitSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARKitSample.release.xcconfig"; sourceTree = "<group>"; };
+		E1027957F7F05A89030691A66942F0BD /* UIImage+ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ImageResource.swift"; path = "Library/UIKit/UIImage+ImageResource.swift"; sourceTree = "<group>"; };
+		E1C17A0CE08527074CFBA85F85F3BD2F /* UINib+NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINib+NibResource.swift"; path = "Library/UIKit/UINib+NibResource.swift"; sourceTree = "<group>"; };
+		E40211590987013771B12A9E6A205A83 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TypedStoryboardSegueInfo+UIStoryboardSegue.swift"; path = "Library/UIKit/TypedStoryboardSegueInfo+UIStoryboardSegue.swift"; sourceTree = "<group>"; };
+		E5EF63BD993A36046D4DF0164B1CEA77 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBF282C947A66169963DB7D70DDBDB63 /* UITableView+ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+ReuseIdentifierProtocol.swift"; path = "Library/UIKit/UITableView+ReuseIdentifierProtocol.swift"; sourceTree = "<group>"; };
+		ED37A48DFBEA3718768A223DC302961E /* ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorResource.swift; path = Library/Core/ColorResource.swift; sourceTree = "<group>"; };
+		F82D60D8DF3CDF200EE3EF3B00E5FDFD /* Data+FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+FileResource.swift"; path = "Library/Foundation/Data+FileResource.swift"; sourceTree = "<group>"; };
+		F83611560969FEE4B27D75C3BCD4129D /* Pods-ARKitSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ARKitSample-umbrella.h"; sourceTree = "<group>"; };
+		FC8B21F52F6299970235609CB9A63893 /* FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileResource.swift; path = Library/Core/FileResource.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82E239D9ACD34395F353A971CF9C7ED9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EFE1392A6BABE4B5F328572E8DEB2A8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88FB4534E3E27ABF10446031B9B57D23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1433DC84197AC5827E63798901FBEEB6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93AE10BB3EBB5DEF04C8F76C675EFC68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B990F43B57684086115EA08462098C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1873AC9E64C1F7DC748C7546068EA8C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16F33D34C0DC1DFD08D50E2298C724F7 /* Pods_ARKitSample.framework */,
+				300B4A9FCF936800FBFA32A3FF11DD08 /* Rswift.framework */,
+				AA9DE0C92E75A7D1449B70F8894AD94F /* SwiftyTimer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DBA9E7A92D8C29E8ECF97463F474DF0 /* R.swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = R.swift;
+			sourceTree = "<group>";
+		};
+		44F7869A38CBD495264C41A60E65048B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				646FC2727695CBDFEFA731E74F137D38 /* Info.plist */,
+				29E869E95DBB3BDEAAF6B03A5546617F /* R.swift.Library.modulemap */,
+				3775491AB698459B142D68D2CFE41F8C /* R.swift.Library.xcconfig */,
+				A657AE49EBBF30AC3B1FEBB3117B4866 /* R.swift.Library-dummy.m */,
+				CB48CD08178F5D46BC6317155D04FCB1 /* R.swift.Library-prefix.pch */,
+				D95E84A40C357216AFFBA69581075DED /* R.swift.Library-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/R.swift.Library";
+			sourceTree = "<group>";
+		};
+		64105C023B56DB2681EB4DB01FAF7D37 /* Pods-ARKitSample */ = {
+			isa = PBXGroup;
+			children = (
+				A855F73EAAEEE4458DF52A3C49A689A5 /* Info.plist */,
+				7360A92647B1C56D8F5F247C01236350 /* Pods-ARKitSample.modulemap */,
+				4C64B335DADD629B890A905FC09A6547 /* Pods-ARKitSample-acknowledgements.markdown */,
+				24BEE181454862A53A71BD9A60E97183 /* Pods-ARKitSample-acknowledgements.plist */,
+				0A4589A7F368623E9105D05597272B1D /* Pods-ARKitSample-dummy.m */,
+				5CF59B2A834F3A242F3D5FFF4D8D4E12 /* Pods-ARKitSample-frameworks.sh */,
+				33A8150B34C5F8ED47E5B1FEA49D9DF5 /* Pods-ARKitSample-resources.sh */,
+				F83611560969FEE4B27D75C3BCD4129D /* Pods-ARKitSample-umbrella.h */,
+				76FA1DB8C4D6B8F6F2E73142669C41BD /* Pods-ARKitSample.debug.xcconfig */,
+				DCEDF06DE23135DF19F6203C7C63FDE6 /* Pods-ARKitSample.release.xcconfig */,
+			);
+			name = "Pods-ARKitSample";
+			path = "Target Support Files/Pods-ARKitSample";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				C50B179E4FD871A8589BD208C74479E7 /* Pods */,
+				1873AC9E64C1F7DC748C7546068EA8C0 /* Products */,
+				F26DDD54827D3B70AA13CF65E74176D5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A90BBE723B943B6D8F7A7393EB8331C3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5EF63BD993A36046D4DF0164B1CEA77 /* Info.plist */,
+				99660EC2A0F404C74568952E1BDD75A8 /* SwiftyTimer.modulemap */,
+				48E83B7F0ECD0AC9031C08B43F0C498D /* SwiftyTimer.xcconfig */,
+				18E76AF83F248E8BDC535BB635E8D379 /* SwiftyTimer-dummy.m */,
+				B2E7E58208FC9F0739206BB01BF9360F /* SwiftyTimer-prefix.pch */,
+				14C4A1E710E8F2F24E85862BA55F59B4 /* SwiftyTimer-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyTimer";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C50B179E4FD871A8589BD208C74479E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA9E7A92D8C29E8ECF97463F474DF0 /* R.swift */,
+				DC42CD517887C0D0957B22A3BAAB7CF4 /* R.swift.Library */,
+				F2DA2C52424EAD1D74FFD95689DFD9F0 /* SwiftyTimer */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DC42CD517887C0D0957B22A3BAAB7CF4 /* R.swift.Library */ = {
+			isa = PBXGroup;
+			children = (
+				51D6D81072180ED3F47AF7DCCB03C85A /* Bundle+FileResource.swift */,
+				262BE8DC53783F325DC414EF8BE5A267 /* ColorPaletteItemResource.swift */,
+				7E9D6EAEBDE598849469EB5B896FC8E6 /* ColorPaletteItemResource+UIKit.swift */,
+				ED37A48DFBEA3718768A223DC302961E /* ColorResource.swift */,
+				F82D60D8DF3CDF200EE3EF3B00E5FDFD /* Data+FileResource.swift */,
+				FC8B21F52F6299970235609CB9A63893 /* FileResource.swift */,
+				09AE6B582AF2B8E5A40FF050E220C438 /* FontResource.swift */,
+				62E5AFAE9418087DC0673D76F45D3000 /* Identifier.swift */,
+				D12AE89B240371C9955C8755E633E505 /* ImageResource.swift */,
+				DB272DECF3D5634780EBC79DF531AA05 /* NibResource.swift */,
+				473D600D3EE4C4A4FD477592C9C3979B /* NibResource+UIKit.swift */,
+				2EF2C8DA3EB10C94D7453543B2524179 /* ReuseIdentifierProtocol.swift */,
+				9613BFA254198C96D74C6EC27375E44A /* StoryboardResource.swift */,
+				C9D350F31915F1F04EE538BCAFC0B901 /* StoryboardResourceWithInitialController+UIKit.swift */,
+				86FBFF8487CD5CA76250229B763ACE05 /* StoryboardSegueIdentifierProtocol.swift */,
+				D16DB7060B4C1FD9D79F5EC3ADE5630E /* StoryboardViewControllerResource.swift */,
+				AE2CE54138961C0FD6B1E2464D08557A /* StringResource.swift */,
+				E40211590987013771B12A9E6A205A83 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */,
+				8B1DC76AE4C5A4AB0F1A0337375940EB /* UICollectionView+ReuseIdentifierProtocol.swift */,
+				8E7600D892346DE68BD0089E062D752D /* UIColor+ColorResource.swift */,
+				C63C0EC9B8AE2CCE037D384F0F939077 /* UIFont+FontResource.swift */,
+				E1027957F7F05A89030691A66942F0BD /* UIImage+ImageResource.swift */,
+				E1C17A0CE08527074CFBA85F85F3BD2F /* UINib+NibResource.swift */,
+				55A61861CD30D63314A796A0294614CF /* UIStoryboard+StoryboardResource.swift */,
+				B50C3AFA31A4DD1ECF363E59FE76AEB9 /* UIStoryboard+StoryboardViewControllerResource.swift */,
+				EBF282C947A66169963DB7D70DDBDB63 /* UITableView+ReuseIdentifierProtocol.swift */,
+				5BC89EDAFE954139646B5FCBEA023BB1 /* UIViewController+NibResource.swift */,
+				B3A4252D84FFE23EA8C6D21C21C8B8B0 /* UIViewController+StoryboardSegueIdentifierProtocol.swift */,
+				9F324714A97134D346B7739CDEE9708E /* Validatable.swift */,
+				44F7869A38CBD495264C41A60E65048B /* Support Files */,
+			);
+			path = R.swift.Library;
+			sourceTree = "<group>";
+		};
+		F26DDD54827D3B70AA13CF65E74176D5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				64105C023B56DB2681EB4DB01FAF7D37 /* Pods-ARKitSample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F2DA2C52424EAD1D74FFD95689DFD9F0 /* SwiftyTimer */ = {
+			isa = PBXGroup;
+			children = (
+				CF02E7ECC3AEFDA485EBF0B2C804D5FC /* SwiftyTimer.swift */,
+				A90BBE723B943B6D8F7A7393EB8331C3 /* Support Files */,
+			);
+			path = SwiftyTimer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8431BF1F023790865EBB8E10D5138D99 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7460CCE53EB0C62D92856A4CFFD28474 /* R.swift.Library-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF7D858F61C46634389E6A744540E95 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B791E083E120A04F5837A4A7CC6BD42C /* SwiftyTimer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEB53D5D5EE3E06AA6246C90099582E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C00C05EED4E0ADE251A124033A1A57 /* Pods-ARKitSample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		12A2406B6CF0E6152DBC461586F1FE31 /* SwiftyTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61AAB2A5B5B26422BB68F65FB03184DB /* Build configuration list for PBXNativeTarget "SwiftyTimer" */;
+			buildPhases = (
+				50B36C572A0E4F9F055D568BDD3DD747 /* Sources */,
+				82E239D9ACD34395F353A971CF9C7ED9 /* Frameworks */,
+				9DF7D858F61C46634389E6A744540E95 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyTimer;
+			productName = SwiftyTimer;
+			productReference = AA9DE0C92E75A7D1449B70F8894AD94F /* SwiftyTimer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6A93A27B507DC2DDC9216EA32495A7E9 /* Pods-ARKitSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAE10F7CC57BCCD1764133212DCF7FBF /* Build configuration list for PBXNativeTarget "Pods-ARKitSample" */;
+			buildPhases = (
+				84B6B82AC740EA9246C21B66CDD50624 /* Sources */,
+				88FB4534E3E27ABF10446031B9B57D23 /* Frameworks */,
+				FEB53D5D5EE3E06AA6246C90099582E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99B489E54EB3D75A615D58B99F54FC04 /* PBXTargetDependency */,
+				870D283456BD283BAD8B89DC952AFE73 /* PBXTargetDependency */,
+			);
+			name = "Pods-ARKitSample";
+			productName = "Pods-ARKitSample";
+			productReference = 16F33D34C0DC1DFD08D50E2298C724F7 /* Pods_ARKitSample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A899EDE3362F7583948C3B2E07CFD3F1 /* R.swift.Library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041B2C0F9147C04740DAEDAF01730B23 /* Build configuration list for PBXNativeTarget "R.swift.Library" */;
+			buildPhases = (
+				6DD3176078D396F82C0F8147DA8C9816 /* Sources */,
+				93AE10BB3EBB5DEF04C8F76C675EFC68 /* Frameworks */,
+				8431BF1F023790865EBB8E10D5138D99 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = R.swift.Library;
+			productName = R.swift.Library;
+			productReference = 300B4A9FCF936800FBFA32A3FF11DD08 /* Rswift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1873AC9E64C1F7DC748C7546068EA8C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A93A27B507DC2DDC9216EA32495A7E9 /* Pods-ARKitSample */,
+				A899EDE3362F7583948C3B2E07CFD3F1 /* R.swift.Library */,
+				12A2406B6CF0E6152DBC461586F1FE31 /* SwiftyTimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50B36C572A0E4F9F055D568BDD3DD747 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44F488ED36BC290919E004118D428741 /* SwiftyTimer-dummy.m in Sources */,
+				A3E18FD9543AF8E1804985FFC2C62541 /* SwiftyTimer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DD3176078D396F82C0F8147DA8C9816 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F5A373986791866025A05DFA35567D /* Bundle+FileResource.swift in Sources */,
+				BF8D02A9906FF8086F972CA0195BE5F8 /* ColorPaletteItemResource+UIKit.swift in Sources */,
+				39AC473B54B7051DC01F054FE09C0116 /* ColorPaletteItemResource.swift in Sources */,
+				3F69D4BC4F7A21915C89F0400BC4CB12 /* ColorResource.swift in Sources */,
+				527A1DF8F93AA5C349C57DD79AC197E2 /* Data+FileResource.swift in Sources */,
+				5401D419A47DAF70F7EC424BF43CE59B /* FileResource.swift in Sources */,
+				DE2FC9736942B69FBDC8F630A4D9F7F1 /* FontResource.swift in Sources */,
+				A63B4E9676B92C6954629BCFB554EA61 /* Identifier.swift in Sources */,
+				6460E0205F88AA5223D2FF4ED26CAAF4 /* ImageResource.swift in Sources */,
+				3854255857A278B80775486DBBC48E8B /* NibResource+UIKit.swift in Sources */,
+				F54811B6BC3FA4640D275377728C3DA4 /* NibResource.swift in Sources */,
+				2EB477F1ACD82760B565AFE947C3B624 /* R.swift.Library-dummy.m in Sources */,
+				1B35C1935D3F3DB57CCCCCAD4A061B00 /* ReuseIdentifierProtocol.swift in Sources */,
+				EDE7196000EF2818061FF65352CE5EF0 /* StoryboardResource.swift in Sources */,
+				3089020AA6047DF76E4965EB9E20F633 /* StoryboardResourceWithInitialController+UIKit.swift in Sources */,
+				45831BA4525EDA9767E9960280328ABE /* StoryboardSegueIdentifierProtocol.swift in Sources */,
+				FD8F7ED5E54425734A484EE0DC3CC014 /* StoryboardViewControllerResource.swift in Sources */,
+				B85BCFB9442D4E83A6E6EBDCF026E8B5 /* StringResource.swift in Sources */,
+				053A36B55E4926579BB69F9A3EB02FDC /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift in Sources */,
+				6C41DCD76140D2D6DC84ABA096AE4592 /* UICollectionView+ReuseIdentifierProtocol.swift in Sources */,
+				5A3667CEEF5B7DE5189983B4F44C3AE6 /* UIColor+ColorResource.swift in Sources */,
+				C771A35C67B620C9EFAE95F3EA54D8BC /* UIFont+FontResource.swift in Sources */,
+				F5FAC7594505E0E06E3989D723676160 /* UIImage+ImageResource.swift in Sources */,
+				D2044BC289754D74C8A611462D0CFECA /* UINib+NibResource.swift in Sources */,
+				DDC0B75FF943E5363733E236C2ED27C3 /* UIStoryboard+StoryboardResource.swift in Sources */,
+				B8B5A299A8ABE0784BF586573DA4093B /* UIStoryboard+StoryboardViewControllerResource.swift in Sources */,
+				10A83EB5CC00B8823FC03736037162BE /* UITableView+ReuseIdentifierProtocol.swift in Sources */,
+				77C806E49FE048A0DAF7B5E1762E8D2C /* UIViewController+NibResource.swift in Sources */,
+				3DC6ED9194CFFE0A66163E0607D06D23 /* UIViewController+StoryboardSegueIdentifierProtocol.swift in Sources */,
+				3064D644DA8FC508084FDD5C6F65657F /* Validatable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B6B82AC740EA9246C21B66CDD50624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A39A0962038343CD5C89D53402CBCF56 /* Pods-ARKitSample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		870D283456BD283BAD8B89DC952AFE73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyTimer;
+			target = 12A2406B6CF0E6152DBC461586F1FE31 /* SwiftyTimer */;
+			targetProxy = 555C4D94E339BA183B07BEAEAEF6FAB8 /* PBXContainerItemProxy */;
+		};
+		99B489E54EB3D75A615D58B99F54FC04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = R.swift.Library;
+			target = A899EDE3362F7583948C3B2E07CFD3F1 /* R.swift.Library */;
+			targetProxy = 5E16B949D4C2C61452596FA1C0C4F267 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		17E6DCB33D98245BC681A82846CFF3D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCEDF06DE23135DF19F6203C7C63FDE6 /* Pods-ARKitSample.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ARKitSample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ARKitSample/Pods-ARKitSample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ARKitSample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3310277F84473067D556FE110B5131CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76FA1DB8C4D6B8F6F2E73142669C41BD /* Pods-ARKitSample.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ARKitSample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ARKitSample/Pods-ARKitSample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ARKitSample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5A1D56CD3520FAD75555313A45ABC97B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3775491AB698459B142D68D2CFE41F8C /* R.swift.Library.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/R.swift.Library/R.swift.Library-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/R.swift.Library/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/R.swift.Library/R.swift.Library.modulemap";
+				PRODUCT_NAME = Rswift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8819673339D1020F77671D6BCB6C2621 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48E83B7F0ECD0AC9031C08B43F0C498D /* SwiftyTimer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTimer/SwiftyTimer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyTimer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyTimer/SwiftyTimer.modulemap";
+				PRODUCT_NAME = SwiftyTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C7116801E51FBA8CBBC5A46049A2FC7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		CFB30BAA6AD717416550641B53898D7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3775491AB698459B142D68D2CFE41F8C /* R.swift.Library.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/R.swift.Library/R.swift.Library-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/R.swift.Library/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/R.swift.Library/R.swift.Library.modulemap";
+				PRODUCT_NAME = Rswift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D80AE9FF2AC188D18B269B926FDB8C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F663FDFCBB8869F7C573A14C395AB866 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48E83B7F0ECD0AC9031C08B43F0C498D /* SwiftyTimer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTimer/SwiftyTimer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyTimer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyTimer/SwiftyTimer.modulemap";
+				PRODUCT_NAME = SwiftyTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		041B2C0F9147C04740DAEDAF01730B23 /* Build configuration list for PBXNativeTarget "R.swift.Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A1D56CD3520FAD75555313A45ABC97B /* Debug */,
+				CFB30BAA6AD717416550641B53898D7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D80AE9FF2AC188D18B269B926FDB8C0C /* Debug */,
+				C7116801E51FBA8CBBC5A46049A2FC7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61AAB2A5B5B26422BB68F65FB03184DB /* Build configuration list for PBXNativeTarget "SwiftyTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F663FDFCBB8869F7C573A14C395AB866 /* Debug */,
+				8819673339D1020F77671D6BCB6C2621 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAE10F7CC57BCCD1764133212DCF7FBF /* Build configuration list for PBXNativeTarget "Pods-ARKitSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3310277F84473067D556FE110B5131CF /* Debug */,
+				17E6DCB33D98245BC681A82846CFF3D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

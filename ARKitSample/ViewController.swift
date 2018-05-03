@@ -45,8 +45,8 @@ class ViewController: UIViewController {
         measureButton.setTitle("Reset", for: .normal)
     }
     
-    @IBAction func didTap(setOriginButton: UIButton) {
-        arSCNViewController.setOriginToCurrentCameraPosition()
+    @IBAction func didTap(tempButton: UIButton) {
+        arSCNViewController.tempTest()
     }
 }
 
